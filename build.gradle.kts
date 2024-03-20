@@ -1,4 +1,7 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
+    id("com.github.johnrengelman.shadow") version "8.1.1"
     kotlin("jvm") version "1.9.23"
     `maven-publish`
 }
@@ -16,6 +19,10 @@ dependencies {
 
     // jline dependencies
     api("org.jline:jline:3.25.1")
+}
+
+tasks.named("shadowJar", ShadowJar::class) {
+    mergeServiceFiles()
 }
 
 publishing {
