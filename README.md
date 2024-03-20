@@ -5,15 +5,6 @@ This allows you to create a console with JLine to create commands for the termin
 
 ### Maven
 ```xml
-<repositories>
-  <repository>
-     <id>github</id>
-     <url>https://maven.pkg.github.com/avionik-world/console-factory</url>
-   </repository>
-</repositories>
-```
-
-```xml
 <dependencies>
  <dependency>
     <groupId>world.avionik</groupId>
@@ -25,12 +16,6 @@ This allows you to create a console with JLine to create commands for the termin
 ```
 
 ### Gradle
-```groovy
-repositories {
-    maven { url = 'https://maven.pkg.github.com/avionik-world/console-factory' }
-}
-```
-
 ```groovy
 dependencies {
     compileOnly 'world.avionik:console-factory:1.0.1'
@@ -51,6 +36,9 @@ To have a "better code structure" there is the [ConsoleInputExecutor](https://gi
 ``` kotlin
 class BirdExecutor : ConsoleInputExecutor {
 
+    /**
+     * This method is executed when a certain input is sent to the console.
+     */
     override fun execute() {
         println("Im a bird")
     }
