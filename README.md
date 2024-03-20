@@ -51,6 +51,9 @@ To have a "better code structure" there is the [ConsoleInputExecutor](https://gi
 ``` kotlin
 class BirdExecutor : ConsoleInputExecutor {
 
+    /**
+     * This method is executed when a certain input is sent to the console.
+     */
     override fun execute() {
         println("Im a bird")
     }
